@@ -63,11 +63,15 @@ body {
   }
   
   h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     color:white;
     grid-column: 2/3;
     margin: 3% auto;
     border-bottom: 2px solid #1940A9;;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
   }
   
   h2 {
