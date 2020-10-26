@@ -1,0 +1,133 @@
+/* Main Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p.italics {
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+li {
+    line-height: 1.5em;
+}
+
+
+
+/* Grid */
+.image { grid-area: image; }
+.contact { grid-area: contact;}
+.side_title { grid-area: title; }
+.item_content { grid-area: main; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    '. image contact .'
+    '. title main .';
+  grid-template-columns: 10% 15% 65% 10%;
+  grid-gap: 0px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px;
+
+}
+
+.grid-item {
+    display:grid;
+    grid-column: 2 / span 2;
+    grid-template-columns: 25% 75%;
+}
+/* side title and item-content are nested inside grid-item */
+.side_title {
+    grid-column: 1;
+    grid-row: 1;
+    vertical-align: text-top;
+    padding-left:20px;
+}
+
+.contact,
+.item_content {
+    grid-column: 2;
+    grid-row: 1;
+    vertical-align: text-top;
+}
+
+div.contact {
+    text-align:right;
+}
+
+button {
+    margin-left: 15%;
+	width: fit-content;
+    height: 15%;
+    font-size: 15px;
+    border-radius: 25px;
+    background: transparent;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+button a {
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media only screen and (min-width : 320px) {
+    h1 {font-size:20px;}
+    h2 {font-size:16px;}
+    h3 {font-size:14px;}
+    #profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {font-size:24px;}
+    h2 {font-size:20px;}
+    h3 {font-size:17px;}
+    #profile-pic {
+        width: 175px;
+        height: 175px;
+    }
+
+
+}
